@@ -3,8 +3,32 @@ package server.view;
 import javax.swing.*;
 
 public class s_View {
-    private JTextArea textArea1;
-    private JPanel panel1;
-    private JTextField textField1;
-    private JButton button1;
+    private JTextArea textChat;
+    private JPanel viewPanel;
+    private JTextField textField;
+    private JButton sendText;
+
+    public s_View() {
+    }
+
+    public JPanel getViewPanel(){
+        return viewPanel;
+    }
+
+    public JTextArea getTextChat() {
+        return textChat;
+    }
+
+    public JTextField getTextField() {
+        return textField;
+    }
+
+    public JButton getSendText(){
+        return sendText;
+    }
+
+
+    public static void main(String[] args) {
+
+    }
 }

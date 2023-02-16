@@ -2,6 +2,7 @@ package server.model;
 
 import com.sun.corba.se.spi.activation.Server;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -24,6 +25,12 @@ public class s_Model {
         }
         System.out.println("Makaroner med server, gott");
     }
+
+    public void sendHello(){
+        JOptionPane.showMessageDialog(null, "hello this is the server");
+    }
+
+    /*
     //ta i mot clients
     private void acceptClients(){
         try {
@@ -53,15 +60,15 @@ public class s_Model {
             out.println("SERVER: " + msg);
         }
     }
-
+*/
 
 
     public static void main(String[] args) {
         int port = 3;
         s_Model s = new s_Model(port);
-        s.acceptClients();
+        //s.acceptClients();
 
-        s.runProtocol();
+        //s.runProtocol();
         s.shutdown();
     }
 
