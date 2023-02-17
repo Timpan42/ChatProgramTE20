@@ -4,21 +4,38 @@ import server.model.s_Model;
 import server.view.s_View;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class s_Controller {
-    private s_Model model;
-    private s_View view;
+    private s_Model sm;
+    private s_View sv;
 
-    public s_Controller(s_Model model, s_View view) {
-        this.model = model;
-        this.view = view;
 
+
+    public s_Controller(s_Model sm, s_View sv) {
+        this.sm = sm;
+        this.sv = sv;
+
+        // send button funkar
+        sv.getSendText().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sm.sendHello();
+            }
+        });
+
+
+
+        // panelen
         JFrame frame = new JFrame("s_View");
-        frame.setContentPane(view.getViewPanel());
+        frame.setContentPane(sv.getViewPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
-    }
+        // clienten
+        sm.acceptClients();
 
+    }
 }

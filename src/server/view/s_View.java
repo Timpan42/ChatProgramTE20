@@ -8,7 +8,9 @@ public class s_View {
     private JTextField textField;
     private JButton sendText;
 
+
     public s_View() {
+
     }
 
     public JPanel getViewPanel(){
@@ -27,8 +29,4 @@ public class s_View {
         return sendText;
     }
 
-
-    public static void main(String[] args) {
-
-    }
 }

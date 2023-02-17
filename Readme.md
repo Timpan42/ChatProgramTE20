@@ -19,3 +19,7 @@ Dock har jag glömnt bort hur man kopplar ihop allt med varandra, så jag har n�
 ## 16 - 02 - 2023
 Jag har nu en main som kan vissa och använda MVC, samt håller på att testa knappen så den funkar.
 Ska jobba vidare med knappen. 
+
+## 17 - 02 - 2023
+Jag kan öppna clienten så att serven ser den samt att client funkar i view.
+ska fort säta till att man kan meddela till servern och clienten 

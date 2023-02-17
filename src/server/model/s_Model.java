@@ -11,13 +11,16 @@ import java.util.Scanner;
 public class s_Model {
     ServerSocket server;
     Socket client;
+    public int port;
 
     PrintWriter out;
     BufferedReader in;
 
     //startar servern
-    public s_Model (int port){
+    public s_Model (){
         try {
+            port = Integer.parseInt(JOptionPane.showInputDialog("what port do you want?"));
+            System.out.println(port);
             server = new ServerSocket(port);
         } catch (IOException e){
             System.err.println("nämen det funkar inte, gör bättre nästa gång");
@@ -30,9 +33,8 @@ public class s_Model {
         JOptionPane.showMessageDialog(null, "hello this is the server");
     }
 
-    /*
     //ta i mot clients
-    private void acceptClients(){
+    public void acceptClients(){
         try {
             client = server.accept();
         } catch (IOException e){
@@ -41,7 +43,7 @@ public class s_Model {
         }
         System.out.println("client är här . . .");
     }
-
+    /*
     private void getStreams(){
         try {
             out = new PrintWriter(client.getOutputStream(),true);
@@ -64,12 +66,13 @@ public class s_Model {
 
 
     public static void main(String[] args) {
-        int port = 3;
+      /*   int port = 3;
         s_Model s = new s_Model(port);
         //s.acceptClients();
 
         //s.runProtocol();
         s.shutdown();
+        */
     }
 
     private void shutdown() {
