@@ -12,20 +12,19 @@ public class c_Model {
 
     public int port;
     public String ip;
-// 10.80.46.146 ip4
     PrintWriter out;
     BufferedReader in;
 
     public c_Model (){
         try{
-            port = Integer.parseInt(JOptionPane.showInputDialog("what port do you want to connect to?"));
-            ip = (JOptionPane.showInputDialog("what ip4 do you want to connect to?"));
+            port = Integer.parseInt(JOptionPane.showInputDialog("Client: what port do you want to connect to?"));
+            ip = (JOptionPane.showInputDialog("Client: what ip4 do you want to connect to?"));
             socket = new Socket(String.valueOf(ip),port);
         }catch (IOException e){
-            System.err.println("servern ville inte ha mig :[");
+            System.err.println("Client: servern ville inte ha mig :[");
             e.printStackTrace();
         }
-        System.out.println("conected and ready . . .");
+        System.out.println("Client: konect and ready . . .");
     }
 
     public void sendHello(){

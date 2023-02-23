@@ -21,7 +21,7 @@ public class s_Controller {
         sv.getSendText().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sm.sendHello();
+                sm.sendHelp();
             }
         });
 
@@ -32,10 +32,12 @@ public class s_Controller {
         frame.setContentPane(sv.getViewPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setSize(800,400);
         frame.setVisible(true);
 
         // clienten
         sm.acceptClients();
+        sm.getStreams();
 
     }
 }

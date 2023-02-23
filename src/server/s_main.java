@@ -5,6 +5,7 @@ import server.controller.s_Controller;
 import server.view.s_View;
 
 
+
 public class s_main {
     public static void main(String[] args) {
         s_Model model = new s_Model();

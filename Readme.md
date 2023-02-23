@@ -23,3 +23,7 @@ Ska jobba vidare med knappen.
 ## 17 - 02 - 2023
 Jag kan öppna clienten så att serven ser den samt att client funkar i view.
 ska fort säta till att man kan meddela till servern och clienten 
+
+## 23 - 02 - 2023
+Har försökt att få strems att funka, dock vet jag inte riktigt hur den funkar.
+Nästa lektion kan jag behöva hjälp med hur man använder den.

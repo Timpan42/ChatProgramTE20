@@ -19,17 +19,17 @@ public class s_Model {
     //startar servern
     public s_Model (){
         try {
-            port = Integer.parseInt(JOptionPane.showInputDialog("what port do you want?"));
+            port = Integer.parseInt(JOptionPane.showInputDialog("Server: what port do you want?"));
             System.out.println(port);
             server = new ServerSocket(port);
         } catch (IOException e){
-            System.err.println("nämen det funkar inte, gör bättre nästa gång");
+            System.err.println("Server: nämen det funkar inte, gör bättre nästa gång");
             e.printStackTrace();
         }
-        System.out.println("Makaroner med server, gott");
+        System.out.println("Server: Makaroner med server, gott");
     }
 
-    public void sendHello(){
+    public void sendHelp(){
         JOptionPane.showMessageDialog(null, "hello this is the server");
     }
 
@@ -38,13 +38,13 @@ public class s_Model {
         try {
             client = server.accept();
         } catch (IOException e){
-            System.err.println("Funkar inte att koppla till client");
+            System.err.println("Server: Funkar inte att koppla till client");
             e.printStackTrace();
         }
-        System.out.println("client är här . . .");
+        System.out.println("Server: client är här . . .");
     }
-    /*
-    private void getStreams(){
+
+    public void getStreams(){
         try {
             out = new PrintWriter(client.getOutputStream(),true);
             in = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -53,6 +53,7 @@ public class s_Model {
         }
         System.out.println("den stremar . . .");
     }
+    /*
     private void runProtocol(){
         Scanner tgb = new Scanner(System.in);
         System.out.println("chattar");
@@ -63,17 +64,6 @@ public class s_Model {
         }
     }
 */
-
-
-    public static void main(String[] args) {
-      /*   int port = 3;
-        s_Model s = new s_Model(port);
-        //s.acceptClients();
-
-        //s.runProtocol();
-        s.shutdown();
-        */
-    }
 
     private void shutdown() {
         try {
