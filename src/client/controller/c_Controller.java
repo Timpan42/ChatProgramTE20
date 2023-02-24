@@ -34,6 +34,10 @@ public class c_Controller {
         frame.setSize(800,400);
         frame.setVisible(true);
 
+        cm.getStreams();
+
+        cm.runProtocol();
+
     }
 }
 

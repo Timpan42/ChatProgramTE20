@@ -1,17 +1,16 @@
 package client.model;
 
 import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class c_Model {
     Socket socket;
 
     public int port;
     public String ip;
+
     PrintWriter out;
     BufferedReader in;
 
@@ -31,8 +30,24 @@ public class c_Model {
         JOptionPane.showMessageDialog(null, "hello this is the client");
     }
 
-    private void getStreams() {
+    public void getStreams() {
+        try {
+            out = new PrintWriter(socket.getOutputStream(),true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        System.out.println("den stremar . . .");
+    }
 
+    public void runProtocol(){
+        Scanner tgb = new Scanner(System.in);
+        System.out.println("du får chatta client");
+        String msg = "";
+        while (!msg.equals("STOP")) {
+            msg = tgb.nextLine();
+            out.println("SERVER: " + msg);
+        }
     }
 
     public static void main(String[] args) {

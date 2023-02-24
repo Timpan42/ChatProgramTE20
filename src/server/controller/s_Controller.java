@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class s_Controller {
     private s_Model sm;
     private s_View sv;
@@ -38,6 +39,8 @@ public class s_Controller {
         // clienten
         sm.acceptClients();
         sm.getStreams();
+
+        sm.runProtocol();
 
     }
 }

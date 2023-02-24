@@ -53,17 +53,16 @@ public class s_Model {
         }
         System.out.println("den stremar . . .");
     }
-    /*
-    private void runProtocol(){
+
+    public void runProtocol(){
         Scanner tgb = new Scanner(System.in);
-        System.out.println("chattar");
+        System.out.println("Du får chatta server");
         String msg = "";
         while (!msg.equals("STOP")) {
             msg = tgb.nextLine();
             out.println("SERVER: " + msg);
         }
     }
-*/
 
     private void shutdown() {
         try {

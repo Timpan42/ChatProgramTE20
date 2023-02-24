@@ -27,3 +27,6 @@ ska fort säta till att man kan meddela till servern och clienten
 ## 23 - 02 - 2023
 Har försökt att få strems att funka, dock vet jag inte riktigt hur den funkar.
 Nästa lektion kan jag behöva hjälp med hur man använder den.
+
+## 24 - 02 -2023
+har skapat två listerthread, har inte testat dem, ska göra det nästa gång 
