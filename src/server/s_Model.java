@@ -1,4 +1,4 @@
-package server.model;
+package server;
 
 import com.sun.corba.se.spi.activation.Server;
 

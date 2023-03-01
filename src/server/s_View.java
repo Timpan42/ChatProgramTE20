@@ -1,15 +1,15 @@
-package client.view;
+package server;
 
 import javax.swing.*;
 
-public class c_View {
-    private JTextField textEnter;
-    private JButton sendText;
+public class s_View {
     private JTextArea textChat;
     private JPanel viewPanel;
+    private JTextField textField;
+    private JButton sendText;
 
 
-    public c_View() {
+    public s_View() {
 
     }
 
@@ -21,8 +21,8 @@ public class c_View {
         return textChat;
     }
 
-    public JTextField getTextEnter() {
-        return textEnter;
+    public JTextField getTextField() {
+        return textField;
     }
 
     public JButton getSendText(){
@@ -30,4 +30,3 @@ public class c_View {
     }
 
 }
-

@@ -1,12 +1,5 @@
 package client;
 
-import client.controller.c_Controller;
-import client.model.c_Model;
-import client.view.c_View;
-import server.controller.s_Controller;
-import server.model.s_Model;
-import server.view.s_View;
-
 public class c_main {
     public static void main(String[] args) {
         c_Model model = new c_Model();

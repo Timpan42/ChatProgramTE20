@@ -1,14 +1,8 @@
-package client.controller;
-
-import client.model.c_Model;
-import client.view.c_View;
-import server.model.s_Model;
-import server.view.s_View;
+package client;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class c_Controller {
     c_Model cm;

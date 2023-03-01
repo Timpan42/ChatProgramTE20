@@ -1,7 +1,4 @@
-package server.controller;
-
-import server.model.s_Model;
-import server.view.s_View;
+package server;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

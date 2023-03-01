@@ -1,10 +1,5 @@
 package server;
 
-import server.model.s_Model;
-import server.controller.s_Controller;
-import server.view.s_View;
-
-
 
 public class s_main {
     public static void main(String[] args) {
