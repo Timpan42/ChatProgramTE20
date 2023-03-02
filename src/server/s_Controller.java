@@ -11,6 +11,7 @@ public class s_Controller {
 
 
 
+
     public s_Controller(s_Model sm, s_View sv) {
         this.sm = sm;
         this.sv = sv;
@@ -18,10 +19,12 @@ public class s_Controller {
         // send button funkar
         sv.getSendText().addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                sm.sendHelp();
+            public void actionPerformed(ActionEvent ae) {
+                String getValue = sv.getTextInput();
+                sv.setTextChat(getValue + "\n");
             }
         });
+
 
 
 
@@ -36,6 +39,12 @@ public class s_Controller {
         // clienten
         sm.acceptClients();
         sm.getStreams();
+
+        /*
+        s_ListenerThread S = new s_ListenerThread(.in, sv.out);
+        Thread liten = new Thread(S);
+        liten.start();
+         */
 
         sm.runProtocol();
 

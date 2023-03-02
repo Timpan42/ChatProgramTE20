@@ -37,6 +37,7 @@ public class s_Model {
     public void acceptClients(){
         try {
             client = server.accept();
+
         } catch (IOException e){
             System.err.println("Server: Funkar inte att koppla till client");
             e.printStackTrace();

@@ -7,9 +7,9 @@ import java.io.PrintWriter;
 
 public class s_ListenerThread implements Runnable {
     private BufferedReader in;
-    private PrintStream out;
+    private PrintWriter out;
 
-    public s_ListenerThread(BufferedReader in, PrintStream out) {
+    public s_ListenerThread(BufferedReader in, PrintWriter out) {
         this.in = in;
         this.out = out;
     }

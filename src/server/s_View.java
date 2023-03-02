@@ -5,7 +5,7 @@ import javax.swing.*;
 public class s_View {
     private JTextArea textChat;
     private JPanel viewPanel;
-    private JTextField textField;
+    private JTextField textInput;
     private JButton sendText;
 
 
@@ -21,8 +21,12 @@ public class s_View {
         return textChat;
     }
 
-    public JTextField getTextField() {
-        return textField;
+    public void setTextChat(String textChat) {
+        this.textChat.append(textChat);
+    }
+
+    public String getTextInput() {
+        return textInput.getText();
     }
 
     public JButton getSendText(){

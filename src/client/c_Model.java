@@ -50,13 +50,8 @@ public class c_Model {
         }
     }
 
-    public static void main(String[] args) {
-      /*  int port = 3;
-        String ip = "10.80.46.146";
-        c_Model test = new c_Model(ip, port);
-        test.shutdown();
-       */
-    }
+
+
 
     private void shutdown() {
         try {
