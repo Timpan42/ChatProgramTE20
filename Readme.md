@@ -30,3 +30,7 @@ Nästa lektion kan jag behöva hjälp med hur man använder den.
 
 ## 24 - 02 -2023
 har skapat två listerthread, har inte testat dem, ska göra det nästa gång 
+
+## 02 - 03 - 2023
+Kan ta infromation från input felten i view och post den i chat områden.
+Ska fixa det på client sidan och så det går att sicka infomration mellan servern och clienter så man kan prata med varandra.
