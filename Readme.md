@@ -34,3 +34,10 @@ har skapat två listerthread, har inte testat dem, ska göra det nästa gång
 ## 02 - 03 - 2023
 Kan ta infromation från input felten i view och post den i chat områden.
 Ska fixa det på client sidan och så det går att sicka infomration mellan servern och clienter så man kan prata med varandra.
+
+## 03 - 03 - 2023
+Programet går att använda dock med många problem.
+Man kan skicka ett meddelande mellan använderna så det syns i view
+men texten hamnar fel och man kan bara start programet genom controllerna.
+Servern och en client kan prata med varandra. Behövde testa 
+mycket för att få saker att funka, så visa funktioner funkar inte.  

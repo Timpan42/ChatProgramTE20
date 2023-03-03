@@ -1,7 +1,5 @@
 package server;
 
-import com.sun.corba.se.spi.activation.Server;
-
 import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
@@ -13,13 +11,51 @@ public class s_Model {
     Socket client;
     public int port;
 
+    s_Controller sc;
+
     PrintWriter out;
     BufferedReader in;
+
+
+    public String name = "";
+    public String msg = "";
+    public String log = "";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getLog() {
+        return log;
+    }
+
+    public void setLog(String log) {
+        this.log = log;
+    }
+
+    public void sendLog(String msg){
+        out.println(msg + "\n");
+    }
+
+
+
 
     //startar servern
     public s_Model (){
         try {
-            port = Integer.parseInt(JOptionPane.showInputDialog("Server: what port do you want?"));
+            int port = Integer.parseInt(JOptionPane.showInputDialog("Server: what port do you want?"));
             System.out.println(port);
             server = new ServerSocket(port);
         } catch (IOException e){
@@ -27,10 +63,6 @@ public class s_Model {
             e.printStackTrace();
         }
         System.out.println("Server: Makaroner med server, gott");
-    }
-
-    public void sendHelp(){
-        JOptionPane.showMessageDialog(null, "hello this is the server");
     }
 
     //ta i mot clients
@@ -61,11 +93,11 @@ public class s_Model {
         String msg = "";
         while (!msg.equals("STOP")) {
             msg = tgb.nextLine();
-            out.println("SERVER: " + msg);
+            out.println("Server: " + msg);
         }
     }
 
-    private void shutdown() {
+    public void shutdown() {
         try {
             client.close();
         } catch (IOException e) {

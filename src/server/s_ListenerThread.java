@@ -6,10 +6,11 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 
 public class s_ListenerThread implements Runnable {
-    private BufferedReader in;
-    private PrintWriter out;
 
-    public s_ListenerThread(BufferedReader in, PrintWriter out) {
+    private BufferedReader in;
+    private s_Controller out;
+
+    public s_ListenerThread(BufferedReader in, s_Controller out) {
         this.in = in;
         this.out = out;
     }
@@ -23,7 +24,7 @@ public class s_ListenerThread implements Runnable {
             } catch (IOException e){
                 e.printStackTrace();
             }
-            out.println(msg);
+            out.newLog(msg);
         }
 
     }

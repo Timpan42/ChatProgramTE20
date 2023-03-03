@@ -25,6 +25,10 @@ public class s_View {
         this.textChat.append(textChat);
     }
 
+    public void setTextInput(String textInput) {
+        this.textInput.setText(textInput);
+    }
+
     public String getTextInput() {
         return textInput.getText();
     }

@@ -21,8 +21,16 @@ public class c_View {
         return textChat;
     }
 
-    public JTextField getTextEnter() {
-        return textEnter;
+    public void setTextChat(String textChat){
+        this.textChat.append(textChat);
+    }
+
+    public void setTextEnter(String textInput) {
+        this.textEnter.setText(textInput);
+    }
+
+    public String getTextEnter() {
+        return textEnter.getText();
     }
 
     public JButton getSendText(){
