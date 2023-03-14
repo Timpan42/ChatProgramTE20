@@ -34,6 +34,7 @@ public class c_Controller {
     public c_Controller(c_Model cm, c_View cv) {
         this.cm = cm;
         this.cv = cv;
+        cm.setName(JOptionPane.showInputDialog("Vad är ditt namn?"));
 
         cv.getSendText().addActionListener(new ActionListener() {
             @Override
@@ -59,6 +60,7 @@ public class c_Controller {
         frame.setSize(800,400);
         frame.setVisible(true);
 
+
         // starta program
       /*  cm.getStreams();
         startThread();
@@ -74,8 +76,8 @@ public class c_Controller {
     public static void main(String[] args) {
         c_Model m = new c_Model();
         c_View v = new c_View();
+        //10.80.46.146
         c_Controller c = new c_Controller(m,v);
-        m.setName("mark");
 
         //ServerModel s = new ServerModel(5858);
         m.getStreams();

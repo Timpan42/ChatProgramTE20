@@ -25,7 +25,7 @@ public class c_ListenerThread implements Runnable {
             } catch (IOException e){
                 e.printStackTrace();
             }
-            out.newLog(msg);
+            out.newLog(msg + "\n");
         }
 
     }

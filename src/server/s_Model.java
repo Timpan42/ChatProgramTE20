@@ -46,7 +46,7 @@ public class s_Model {
     }
 
     public void sendLog(String msg){
-        out.println(msg + "\n");
+        out.println(msg);
     }
 
 

@@ -30,9 +30,10 @@ public class s_Controller {
     }
 
     public s_Controller(s_Model sm, s_View sv) {
-
         this.sm = sm;
         this.sv = sv;
+        sm.setName(JOptionPane.showInputDialog("Vad är ditt namn?"));
+
 
         sv.getSendText().addActionListener(new ActionListener() {
             @Override
@@ -55,6 +56,7 @@ public class s_Controller {
         frame.setSize(800,400);
         frame.setVisible(true);
 
+
         // funktioner
         //sendText();
        // sm.setName("olof");
@@ -76,7 +78,6 @@ public class s_Controller {
         s_Model m = new s_Model();
         s_View v = new s_View();
         s_Controller c = new s_Controller(m,v);
-        m.setName("olof");
 
         //ServerModel s = new ServerModel(5858);
         m.acceptClients();

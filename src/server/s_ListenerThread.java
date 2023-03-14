@@ -17,14 +17,14 @@ public class s_ListenerThread implements Runnable {
 
     @Override
     public void run() {
-        String msg = null;
+        String msg = "";
         while (true){
             try {
                 msg = in.readLine();
             } catch (IOException e){
                 e.printStackTrace();
             }
-            out.newLog(msg);
+            out.newLog(msg+ "\n");
         }
 
     }

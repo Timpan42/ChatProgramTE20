@@ -41,3 +41,7 @@ Man kan skicka ett meddelande mellan använderna så det syns i view
 men texten hamnar fel och man kan bara start programet genom controllerna.
 Servern och en client kan prata med varandra. Behövde testa 
 mycket för att få saker att funka, så visa funktioner funkar inte.  
+
+## 03 - 14 - 2023
+Man kan prata med varandra genom viewn (servern och clienten) och det blir inget konstigt mellan rum
+och man kan skriva in ett namn
